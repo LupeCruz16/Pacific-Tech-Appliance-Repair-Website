@@ -109,16 +109,9 @@ nav ul li a {
 
   .about {
     margin: 20px;
-    padding: 40px;
-  }
-  
-  .about-content ul {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .about-content li {
-    margin-bottom: 10px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .about-content span.family-owned {
@@ -128,9 +121,89 @@ nav ul li a {
   .about-content span.licensed {
     color: #5fb2f9;
   }
+
+  .hours {
+    padding-left: 60px;
+  }
+
+  .payment-methods {
+    margin: 20px;
+    padding-left: 40px;
+  }
   
   .about-content span.spanish-english {
     color: #5fb2f9;
+  }
+  
+  .about-content ul,hours ul, .payment-methods ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+
+  .about-content li, hours li, .payment-methods li {
+    margin-bottom: 10px;
+  }
+  
+  .payment-methods p {
+    margin-top: 20px;
+  }
+  
+  .payment-methods li {
+    margin-bottom: 5px;
+  }
+  
+  .payment-methods li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .payment-methods span {
+    color: #5fb2f9;
+  }
+
+  .brand-images-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .brand-images-1, .brand-images-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  
+  .brand-images-2 {
+    opacity: 0;
+  }
+  
+  .brand-images-1 img, .brand-images-2 img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .brand-images-container.animate .brand-images-1 {
+    animation: fade 1s ease-in-out forwards;
+  }
+  
+  .brand-images-container.animate .brand-images-2 {
+    animation: fade 1s ease-in-out forwards;
   }
 
   main {
