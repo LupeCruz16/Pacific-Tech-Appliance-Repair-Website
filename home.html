@@ -5,15 +5,7 @@
     <meta charset="UTF-8">
     <title>Pacific Tech Appliance Repair</title>
     <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
-    <style>
-      .hero-image {
-        background-image: url('path/to/image.jpg'); /* Replace with path to your image */
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css"> 
   </head>
 
   <body>
@@ -88,7 +80,7 @@
         </div>
         <div class="sections-container">
           <section class="about">
-            <h2>About Us</h2>
+            <h2>Why Us</h2>
             <ul>
               <li><span class="family-owned">Family-owned</span> business in Escondido, CA.</li>
               <li>Specializing in major appliance repair.</li>
@@ -154,6 +146,92 @@
           <img src="Graphics/Serviced Brands/wolf.png" alt="Brand 28">
         </div>
       </section>
+
+      <body>
+        <div class="review-container">
+          <div class="review-header">
+            <h1>Customer Reviews</h1>
+            <p>A selection of customer reviews:</p>
+          </div>
+          <div class="review-column">
+            <div class="review-box"></div>
+            <div class="review-box"></div>
+            <div class="review-box"></div>
+          </div>
+        </div>
+        <script src="yelpAPICall.js"></script>
+      </body>
+
+      <script src="formInputField.js"></script>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <span class="underline"></span>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <span class="underline"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required>
+          <span class="underline"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+          <span class="underline"></span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+            <span class="underline"></span>
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+            <span class="underline"></span>
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" required>
+            <span class="underline"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="underline"></span>
+        </div>
+        <div class="form-group">
+          <label for="appliance-type">Appliance Type</label>
+          <input type="text" id="appliance-type" name="appliance-type" required>
+          <span class="underline"></span>
+        </div>
+        <div class="form-group">
+          <label for="appliance-brand">Appliance Brand</label>
+          <input type="text" id="appliance-brand" name="appliance-brand" required>
+          <span class="underline"></span>
+        </div>
+        <div class="form-group">
+          <label for="suite-apt">Suite/Apt (Optional)</label>
+          <input type="text" id="suite-apt" name="suite-apt">
+          <span class="underline"></span>
+        </div>
+        <div class="form-group">
+          <label for="problem-description">Description of Problem</label>
+          <textarea id="problem-description" name="problem-description" rows="4" required></textarea>
+          <span class="underline"></span>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      
+      
       </main>
 
     <footer>
