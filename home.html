@@ -147,94 +147,139 @@
         </div>
       </section>
 
-      <body>
-        <div class="review-container">
-          <div class="review-header">
-            <h1>Customer Reviews</h1>
-            <p>A selection of customer reviews:</p>
-          </div>
-          <div class="review-column">
-            <div class="review-box"></div>
-            <div class="review-box"></div>
-            <div class="review-box"></div>
-          </div>
-        </div>
-        <script src="yelpAPICall.js"></script>
-      </body>
-
       <script src="formInputField.js"></script>
       <form>
+        <h2 class="form-header">Schedule Appointment</h2>
         <div class="form-row">
           <div class="form-group">
-            <label for="first-name">First Name</label>
+            <label for="first-name">First Name<span class="required">*</span></label>
             <input type="text" id="first-name" name="first-name" required>
             <span class="underline"></span>
           </div>
           <div class="form-group">
-            <label for="last-name">Last Name</label>
+            <label for="last-name">Last Name<span class="required">*</span></label>
             <input type="text" id="last-name" name="last-name" required>
             <span class="underline"></span>
           </div>
         </div>
-        <div class="form-group">
-          <label for="address">Address</label>
-          <input type="text" id="address" name="address" required>
-          <span class="underline"></span>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
-          <span class="underline"></span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+            <span class="underline"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <span class="underline"></span>
+          </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="city">City</label>
+            <label for="address">Address<span class="required">*</span></label>
+            <input type="text" id="address" name="address" required>
+            <span class="underline"></span>
+          </div>
+          <div class="form-group">
+            <label for="suite">Suite, Apt, etc...</label>
+            <input type="text" id="suite" name="suite">
+            <span class="underline"></span>
+          </div>
+        </div>
+        <div class="form-trio-row">
+          <div class="form-trio-group">
+            <label for="city">City<span class="required">*</span></label>
             <input type="text" id="city" name="city" required>
             <span class="underline"></span>
           </div>
-          <div class="form-group">
-            <label for="state">State</label>
+          <div class="form-trio-group">
+            <label for="state">State<span class="required">*</span></label>
             <input type="text" id="state" name="state" required>
             <span class="underline"></span>
           </div>
-          <div class="form-group">
-            <label for="zip">Zip Code</label>
+          <div class="form-trio-group">
+            <label for="zip">Zip Code<span class="required">*</span></label>
             <input type="text" id="zip" name="zip" required>
             <span class="underline"></span>
           </div>
+        </div>  
+        <div class="form-trio-row">
+          <div class="form-trio-group">
+            <label for="appliance-type">Appliance Type<span class="required">*</span></label>
+            <input type="text" id="appliance-type" name="appliance-type" required>
+            <span class="underline"></span>
+          </div>
+          <div class="form-trio-group">
+            <label for="appliance-brand">Appliance Brand</label>
+            <input type="text" id="appliance-brand" name="appliance-brand">
+            <span class="underline"></span>
+          </div>
+          <div class="form-trio-group">
+            <label for="date">Date Request<span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+            <span class="underline"></span>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-          <span class="underline"></span>
+        <div class="desc-row">
+          <div class="form-group">
+            <label for="problem-description">Description of Problem<span class="required">*</span></label>
+            <textarea id="problem-description" name="problem-description" rows="4" required></textarea>
+            <span class="underline"></span>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="appliance-type">Appliance Type</label>
-          <input type="text" id="appliance-type" name="appliance-type" required>
-          <span class="underline"></span>
+      <div>
+        <div class="form-buttom">
+          <button type="submit">Submit</button>
         </div>
-        <div class="form-group">
-          <label for="appliance-brand">Appliance Brand</label>
-          <input type="text" id="appliance-brand" name="appliance-brand" required>
-          <span class="underline"></span>
-        </div>
-        <div class="form-group">
-          <label for="suite-apt">Suite/Apt (Optional)</label>
-          <input type="text" id="suite-apt" name="suite-apt">
-          <span class="underline"></span>
-        </div>
-        <div class="form-group">
-          <label for="problem-description">Description of Problem</label>
-          <textarea id="problem-description" name="problem-description" rows="4" required></textarea>
-          <span class="underline"></span>
-        </div>
-        <button type="submit">Submit</button>
+      </div>
       </form>
-      
-      
+
+      <body>
+        <div class="review-container">
+          <div class="review-header">
+            <h1>Our Customer Reviews</h1>
+            <div class = "review-out-of"></div>
+          </div>
+          <div class="review-grid-container">
+            <div class="company-qualities">
+              <img src="Graphics/icons/icons8-20years.png" alt="Image 1">
+              <p>20+ Years of Experience</p>
+            </div>
+            <div class="review-grid-item">
+              <div class="review-box"></div>
+            </div>
+            <div class="company-qualities">
+              <img src="Graphics/icons/icons8-quality.png" alt="Image 3">
+              <p>Providing Quality Services</p>
+            </div>
+            <div class="review-grid-item">
+              <div class="review-box"></div>
+            </div>
+            <div class="company-qualities">
+              <img src="Graphics/icons/icons8-thumbsUp.png" alt="Image 5">
+              <p>100% Customer Satisfaction</p>
+            </div>
+            <div class="review-grid-item">
+              <div class="review-box"></div>
+            </div>
+          </div>
+        </div>
+        <script src="yelpAPICall.js"></script>
+      </body>
       </main>
 
     <footer>
+      <div class="social-media-links">
+        <a href="https://www.yelp.com/biz/pacific-tech-appliance-repair-escondido" target="https://www.yelp.com/biz/pacific-tech-appliance-repair-escondido" rel="noopener noreferrer">
+          <img src="Graphics/icons/icons8-yelpLogoOutline.png" alt="Social Media Link 1">
+        </a>
+        <a href="https://www.facebook.com/northcountyapplianceservice/" target="https://www.facebook.com/northcountyapplianceservice/" rel="noopener noreferrer">
+          <img src="Graphics/icons/icons8-facebookOutline.png" alt="Social Media Link 2">
+        </a>
+        <a href="https://www.instagram.com/sandiegoappliancerepair/" target="https://www.instagram.com/sandiegoappliancerepair/" rel="noopener noreferrer">
+          <img src="Graphics/icons/icons8-instagramOutline.png" alt="Social Media Link 3">
+        </a>
+      </div>
       <div class="bottom-of-page"> <!-- Create a container for footer content with a gray bar background -->
         <p>&copy; 2023 Pacific Tech Appliance Repair</p> <!-- Add copyright notice to footer content -->
       </div>
