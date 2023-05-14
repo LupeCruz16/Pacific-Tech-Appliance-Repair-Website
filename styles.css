@@ -7,7 +7,7 @@ body {
 
 header {
   background-color: var(--white-color);
-  height: 100px;
+  height: 60px;
 }
 
 .header-container {
@@ -108,6 +108,7 @@ nav ul li a {
   font-size: 14px;
 }
 
+/* Why Us,Hours, Payment Method Section*/
 .about span.family-owned,
 .about span.licensed,
 .about span.spanish-english {
@@ -138,6 +139,8 @@ nav ul li a {
 
 .sections-container {
   flex-grow: 1;
+  padding: 20px;
+  align-content: center;
 }
 
 .about,
@@ -166,7 +169,6 @@ nav ul li a {
 .payment-methods ul {
   list-style: disc;
   margin-left: 20px;
-  padding-left: 5; /* Padding for unordered lists */
 }
 
 .about li,
@@ -183,9 +185,11 @@ nav ul li a {
   margin-bottom: 0;
 }
 
+/*Serviced Brands*/
 .brands h2,
 .brands p {
   text-align: center;
+  color: var(--black-color);
 }
 
 .brand-images-container {
@@ -206,17 +210,157 @@ nav ul li a {
   object-fit: contain;
 }
 
-.review-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 70px;
-  background-color: var(--light-color);
+/*Appointment Form  */
+form {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--lightGray-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 40px solid var(--white-color);
 }
 
-.text-column {
+.required{
+  color: var(--red-color);
+}
+
+.form-header {
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.desc-row {
+  padding: 10px;
+}
+
+.form-trio-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.form-trio-group {
+  flex-basis: calc(33.33% - 30px);
+  padding: 10px;
+}
+
+.form-group {
+  flex-basis: calc(49% - 12px);
+  margin-bottom: 10px;
+}
+
+.form-buttom{
+  padding-left: 10px;
+}
+
+.form-group label,
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  height: 15px;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+textarea{
+  width: 100%;
+  height: 15px;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.underline {
+  display: block;
+  height: 2px;
+  background-color: #555;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #555;
+}
+
+input:focus + .underline,
+textarea:focus + .underline {
+  transform: scaleX(1);
+}
+
+textarea[name="problem-description"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 0; /* Remove bottom margin to match other rows */
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #559ddc;
+}
+
+/*Main Content body types*/
+main {
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+}
+
+/* Customer Reviews Section */
+.review-header h1, p {
+  color: var(--white-color);
+  text-align: center;
+}
+
+.review-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-color);
+}
+
+.review-out-of {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.rating-text {
+  color: var(--white-color);
+  font-size: 18px;
 }
 
 .review-column {
@@ -226,7 +370,7 @@ nav ul li a {
 }
 
 .review-box {
-  border: 1px solid #ccc;
+  color: var(--white-color);
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -280,66 +424,74 @@ nav ul li a {
   overflow: hidden;
 }
 
-.centered {
-  text-align: center;
-}
-
-.form-group {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.entry-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #333;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  pointer-events: none;
-}
-
-.entry-input {
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  border-bottom: 1px solid #333;
-  outline: none;
-}
-
-.entry-input:focus + .entry-label,
-.entry-input:valid + .entry-label {
-  top: -20px;
-  font-size: 12px;
-  color: #999;
-}
-
-.underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #333;
-}
-
-button[type="submit"] {
-  background-color: #5fb2f9;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+.read-more {
+  color: var(--white-color);
   cursor: pointer;
 }
 
-main {
-  margin-top: 20px;
-  padding-bottom: 10px;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 5px;
+.yelp-logo-container {
+  display: flex;
+  align-items: center;
 }
 
+.yelp-logo {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.posted-on-yelp {
+  color: var(--white-color);
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.review-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px;
+  gap: 20px;
+}
+
+.review-grid-item {
+  border: 1px solid var(--light-color);
+  color: var(--white-color);
+  padding: 10px;
+  height: 85%;
+}
+
+.company-qualities {
+  color: var(--white-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+}
+
+.company-qualities img {
+  width: 100px;
+  height: 100px;
+}
+
+/*Social Media Icon Links*/
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-media-links a {
+  margin: 0 10px; /* Adjust the spacing between the links */
+}
+
+.social-media-links img {
+  width: 30px; /* Adjust the image size as needed */
+  height: auto;
+}
+
+/*Footer*/
 footer {
   background-color: var(--dark-color);
   color: var(--white-color);
