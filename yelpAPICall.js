@@ -1,7 +1,3 @@
-const businessId = 'pacific-tech-appliance-repair-escondido';
-const apiKey = '-igO-g3vTtoRP2K-0jMX5Y1gpomb68Nol061gUG4JAimyeKW91igle-6Alg0_0gkzywSkQy-3omhQx6WUP0JnGasB3hkwg1PHkQNxalYXuMRj4fmZ3nt3ihXRpldZHYx';
-const proxyUrl = 'http://localhost:8888/page1.php'; 
-const apiUrl = `https://api.yelp.com/v3/businesses/${businessId}/reviews`;
 
 fetch(proxyUrl, {
   method: 'POST',
