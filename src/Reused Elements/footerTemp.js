@@ -1,14 +1,7 @@
-// Create the link element for the CSS file
-const cssLink = document.createElement('link');
-cssLink.rel = 'stylesheet';
-cssLink.href = 'Reused Elements/footer-styles.css'; 
-
-// Append the link element to the document's head
-document.head.appendChild(cssLink);
-
 // Create the footer HTML code
 const footerHTML = `
-<footer>
+    <link rel="stylesheet" href="Reused Elements/footer-styles.css">
+    <footer>
       <div class="social-media-links">
         <a href="https://www.yelp.com/biz/pacific-tech-appliance-repair-escondido" target="https://www.yelp.com/biz/pacific-tech-appliance-repair-escondido" rel="noopener noreferrer">
           <img src="Graphics/icons/icons8-yelpLogoOutline.png" alt="Social Media Link 1">
